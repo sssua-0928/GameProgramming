@@ -2,9 +2,10 @@ Debug
 Release
 *.lib
 *.dll
-*/.vs
+*/.vs/
 */Include/SDL2/
 */Include/*
 
 
 HW3_PhaseTransition_SnakeGame/.vs/
+HW4_LinkedList_SnakeGame/SnakeGame/.vs/
