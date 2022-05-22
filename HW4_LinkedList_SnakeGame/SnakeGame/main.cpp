@@ -37,7 +37,7 @@ int main(int argc, char* argv[]) {
 	while (g_flag_running) {
 		Uint32 cur_time_ms = SDL_GetTicks();
 
-		if (cur_time_ms - g_last_time_ms < 33)
+		if (cur_time_ms - g_last_time_ms < 200)
 			continue;
 
 		game_phases[g_current_game_phase]->HandleEvents();

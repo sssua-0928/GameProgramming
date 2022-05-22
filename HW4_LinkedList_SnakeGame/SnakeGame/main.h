@@ -14,9 +14,12 @@ const int PHASE_INTRO = 0;
 const int PHASE_INGAME = 1;
 const int PHASE_ENDING = 2;
 
+using namespace std;
+
 class PhaseInterface {
 public:
 	PhaseInterface() {};
+	virtual ~PhaseInterface() {};
 
 	virtual void HandleEvents() = 0;
 	virtual void Update() = 0;
