@@ -29,12 +29,10 @@ protected:
 	double coeff_of_restitution_; // from 0 o 1 (환원 계수)
 	double frictional_force_;	//마찰력
 
-	// position
+	// position(경로)
 	double p_[2];	// x, y
-	//double predicted_p_[2];		// 예측경로  x, y
 
-	// velocity
+	// velocity(속도)
 	double v_[2];	// x, y
-	//double predicted_p_[2];		// 예측속도  x, y
 };
 

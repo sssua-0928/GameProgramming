@@ -12,7 +12,6 @@ extern SDL_Window* g_window;
 extern float g_timestep_s;
 
 
-
 ProjectileGame::ProjectileGame()
 {
 	g_flag_running = true;
@@ -233,6 +232,15 @@ ProjectileGame::HandleEvents()
 				
 			}
 			break;
+		
+		case SDL_KEYDOWN: {
+			if (event.key.keysym.sym == SDLK_2) {
+				big2smallWindow();
+			}
+			else if (event.key.keysym.sym == SDLK_1) {
+				small2bigWindow();
+			}
+		}
 
 		default:
 			break;

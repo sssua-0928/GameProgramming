@@ -1,7 +1,21 @@
 #include "G2W.h"
 
-float G2W_Scale = 300.f;
-float W2G_Scale = 1.f / 300.0f;
+float G2W_Scale = big_window;
+float W2G_Scale = 1.f / big_window;
+
+float big_window = 300.f;
+float small_window = 150.f;
+
+void big2smallWindow() {
+	G2W_Scale = small_window;
+	W2G_Scale = 1.f / small_window;
+}
+
+void small2bigWindow() {
+	G2W_Scale = big_window;
+	W2G_Scale = 1.f / big_window;
+}
+
 
 int G2W_X(float g_x)
 {

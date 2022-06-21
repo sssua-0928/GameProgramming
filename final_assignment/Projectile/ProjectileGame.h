@@ -28,11 +28,6 @@ protected:
 	int num_of_balls_;
 	Ball *balls_[MAX_BALL_NUM];
 
-	// Predicted Balls(예측되는 공의 방향)
-	Ball* predicted_ball;
-	float predicted_x[6];
-	float predicted_y[6];
-
 	// Ball Texture
 	SDL_Texture* ball_texture_; 
 	SDL_Rect ball_src_rectangle_;

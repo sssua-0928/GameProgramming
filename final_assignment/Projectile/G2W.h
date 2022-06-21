@@ -10,3 +10,8 @@ float W2G_X(int w_x);
 float W2G_Y(int w_y);
 extern float W2G_Scale;
 
+//Window 사이즈 조정
+extern float small_window;
+extern float big_window;
+void big2smallWindow();
+void small2bigWindow();

@@ -96,28 +96,17 @@ Ball::Update(double timestep_s)
 		v_[0] = coeff_of_restitution_ * v_[0];
 	}
 
-	// Collision with Nett(네트와의 충돌)
-	if ((p_[1] >= 0) && (p_[1] <= 1)) {
-		if ((p_[0] >= -radius_) && (p_[0] <= radius_)) {
-			if (v_[0] > 0) {
-				p_[0] = room_->vertiacal_fence_pos_x() - radius_;
-				v_[0] = -1 * v_[0];
-				// Coefficient of restitution
-				v_[0] = coeff_of_restitution_ * v_[0]; 
-			}
-			else if (v_[0] < 0) {
-				p_[0] = room_->vertiacal_fence_pos_x() + radius_;
-				v_[0] = -1 * v_[0];
-				// Coefficient of restitution
-				v_[0] = coeff_of_restitution_ * v_[0]; 
-			}
-		}
-	}
+	// [1번] 화면축소
+	if ("버튼누르면"){
+		//전체 사이즈 다줄어들기
+	}else if("status=2 상태에서")
 
-	// 마찰력
+	// [2번] 마찰력
 	if ( p_[1] == radius_ + room_->ground_height() ) {
 		v_[0] *= frictional_force_;
 	}
+
+
 	// 속도 = 이전속도 + 시간(dt) * 가속도;
 	v_[0] = v_[0] + dt * a[0];
 	v_[1] = v_[1] + dt * a[1];
