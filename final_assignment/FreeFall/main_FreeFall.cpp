@@ -1,5 +1,5 @@
 
-#include "ProjectileGame.h"
+#include "FreeFallGame.h"
 
 
 /////////////////////////////////////////////////
@@ -13,7 +13,7 @@ Uint32 g_last_time_ms;
 int g_current_game_phase;
 
 // 초단위 timestep (1/60초). Frame time과 시뮬레이션의 timestep으로 사용된다.
-float g_timestep_s = 1.0f / 60.0f;	//60분의 1초(초단위)
+float g_timestep_s = 1.0f / 60.0f; 
 
 int main(int argc, char* argv[])
 {
@@ -21,14 +21,14 @@ int main(int argc, char* argv[])
 	g_window = SDL_CreateWindow("Projectile", 100, 100, 1000, 700, 0);
 	g_renderer = SDL_CreateRenderer(g_window, -1, 0);
 
-	ProjectileGame game;	
+	FreeFallGame game;	
 
 	g_last_time_ms = SDL_GetTicks();
 
 	while ( g_flag_running )
 	{
 		Uint32 cur_time_ms = SDL_GetTicks();
-		if (cur_time_ms - g_last_time_ms < (1000 * g_timestep_s)) // 밀리세턴드 단위로 변환하기 위해 1000 곱함
+		if (cur_time_ms - g_last_time_ms < (1000* g_timestep_s)) // 밀리세턴드 단위로 변환하기 위해 1000 곱함
 			continue;
 
 		game.HandleEvents();

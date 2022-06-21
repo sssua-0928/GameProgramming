@@ -5,7 +5,8 @@ Release
 */.vs/
 */Include/SDL2/
 */Include/*
-
+Include/
+.vs
 
 HW3_PhaseTransition_SnakeGame/.vs/
 HW4_LinkedList_SnakeGame/SnakeGame/.vs/
