@@ -115,7 +115,7 @@ Ball::Update(double timestep_s)
 	}
 
 	// 마찰력
-	if ( p_[1] == radius_ + room_->ground_height() ) {
+	if (p_[1] == radius_ + room_->ground_height()) {
 		v_[0] *= frictional_force_;
 	}
 	// 속도 = 이전속도 + 시간(dt) * 가속도;

@@ -31,10 +31,10 @@ protected:
 
 	// position
 	double p_[2];	// x, y
-	//double predicted_p_[2];		// 예측경로  x, y
+	double predicted_p_[2];		// 예측경로  x, y
 
 	// velocity
 	double v_[2];	// x, y
-	//double predicted_p_[2];		// 예측속도  x, y
+	double predicted_p_[2];		// 예측속도  x, y
 };
 

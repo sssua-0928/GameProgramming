@@ -63,8 +63,8 @@ FreeFallGame::Update()
 
 		// 중력 가속도
 		float g[2];
-		g[0] = 0.f;
-		g[1] = -9.8f;
+		g[0] = 0.f;		//x축 없음
+		g[1] = -9.8f;	//y축 중력만 받음
 
 		// g_timestep_s 시간이 지난 후 공의 위치 계산
 		ball_pos_[0] = ball_pos_[0] + g_timestep_s * ball_vel_[0];
@@ -85,6 +85,7 @@ FreeFallGame::Update()
 		}
 
 		// g_timestep_s 시간이 지난 후 공의 속도 계산
+		// g[i] : 가속도
 		ball_vel_[0] = ball_vel_[0] + g_timestep_s * g[0];
 		ball_vel_[1] = ball_vel_[1] + g_timestep_s * g[1];
 
